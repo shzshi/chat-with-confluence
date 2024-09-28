@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatwithconfluence-pod
+  labels:
+    app: chatwithconfluence
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatwithconfluence
+  template:
+    metadata:
+      labels:
+        app: chatwithconfluence
+    spec:
+      containers:
+      - name: chatwithconfluence-container
+        image: us-central1-docker.pkg.dev/chatwithconfluence/chatwithconfluence:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8501
+        env:
+          - name: OPENAI_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: chatbot-app-secret
+                key: OPENAI_API_KEY
+          - name: CONFLUENCE_PRIVATE_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: chatbot-app-secret
+                key: CONFLUENCE_PRIVATE_API_KEY
+          - name: CONFLUENCE_SPACE_KEY
+            valueFrom:
+              secretKeyRef:
+                name: chatbot-app-secret
+                key: CONFLUENCE_SPACE_KEY
+          - name: CONFLUENCE_SPACE_NAME
+            valueFrom:
+              secretKeyRef:
+                name: chatbot-app-secret
+                key: CONFLUENCE_SPACE_NAME
+          - name: EMAIL_ADRESS
+            valueFrom:
+              secretKeyRef:
+                name: chatbot-app-secret
+                key: EMAIL_ADRESS
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatwithconfluence-service
+spec:
+  selector:
+    app: chatwithconfluence
+  ports:
+  - port: 8501
+  type: LoadBalancer
