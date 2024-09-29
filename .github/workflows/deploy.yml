@@ -11,7 +11,7 @@ env:
   GKE_ZONE: us-central1-a  # cluster zone
   IMAGE: chatwithconfluence  # image name
   IMAGE_TAG: v1 # image tag
-  GAR_ZONE: us-central1-a # artifact registry zone
+  GAR_ZONE: us-central1 # artifact registry zone
   GAR_REPO: chatwithconfluence # artifact registry repository
   # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   # CONFLUENCE_PRIVATE_API_KEY: ${{ secrets.CONFLUENCE_PRIVATE_API_KEY }}
