@@ -84,5 +84,5 @@ jobs:
         echo "Deploying to Kubernetes"
         
         kubectl delete deployment chatwithconfluence
-        kubectl apply -f deploy.yml
+        kubectl apply -f deployments/deploy.yml
         kubectl get pods
