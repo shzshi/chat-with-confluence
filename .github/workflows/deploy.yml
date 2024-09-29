@@ -55,7 +55,7 @@ jobs:
           --tag "$GAR_ZONE-docker.pkg.dev/$PROJECT_ID/$GAR_REPO/$IMAGE:$IMAGE_TAG" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
-          --file deployments/Dockerfile
+          --file deployments/Dockerfile \
           .
     # Push the Docker image to Google Container Registry
     - name: Publish
