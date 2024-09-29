@@ -7,7 +7,7 @@ on:
 #  workflow_dispatch:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: ${{ secret.GKE_CLUSTER }}    # cluster name
+  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}    # cluster name
   GKE_ZONE: us-central1  # cluster zone
   IMAGE: chatwithconfluence  # image name
   IMAGE_TAG: v1 # image tag
