@@ -59,7 +59,7 @@ Now that you have Google Cloud CLI set up, you can create a Kubernetes cluster u
     For example:
 
     ```bash
-    gcloud container clusters get-credentials my-cluster --zone=us-central1-a
+    gcloud container clusters get-credentials chatwithconfluence --zone=us-central1-a
     ```
 
 4. Verify that `kubectl` is configured correctly by running:
@@ -76,3 +76,9 @@ Congratulations! You have successfully created a Google Cloud account, set up Go
 
 
     gcloud container clusters delete my-cluster --zone=us-central1-a
+
+
+
+
+- GO to google console and create GAR repository with name chatwithconfluence. 
+
