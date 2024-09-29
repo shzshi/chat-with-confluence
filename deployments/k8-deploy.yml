@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: chatwithconfluence-container
-        image: us-central1-docker.pkg.dev/chatwithconfluence/chatwithconfluence:v1
+        image: us-central1-docker.pkg.dev/chatwithconfluence/chatwithconfluence/chatwithconfluence:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8501
