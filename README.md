@@ -186,4 +186,4 @@ The streamlite application can be browsed with the service loadbalancer external
 
 ```bash
     kubectl get service 
-    ```
+```
