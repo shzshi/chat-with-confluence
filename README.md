@@ -178,3 +178,12 @@ I have used github workflows to build the app as docker image , push it to googl
 3. Create a new repository in the github, then push the code into newly created respository.
 4. Goto to Actions tab on the github portal and see if pipeline is executed∂. 
 5. On successful deployment you should be able to see browser the application through load balancer IP provided on the kubernetes service. 
+
+
+# Browse the application 
+
+The streamlite application can be browsed with the service loadbalancer external IP on the port 8501
+
+```bash
+    kubectl get service 
+    ```
