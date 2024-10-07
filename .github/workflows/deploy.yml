@@ -82,6 +82,6 @@ jobs:
           --dry-run=client -o yaml | kubectl apply -f -
         
         echo "Deploying to Kubernetes"
-        kubectl delete deploy chatwithconfluence-deploy
         kubectl apply -f deployments/k8-deploy.yml
+        kubectl delete po -l app=chatwithconfluence
         kubectl get pods
