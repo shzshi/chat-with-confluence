@@ -47,7 +47,7 @@ Now that you have Google Cloud CLI set up, you can create a Kubernetes cluster u
     For example:
 
     ```bash
-    gcloud container clusters create chatwithconfluence --num-nodes=3 --zone=us-central1-a
+    gcloud container clusters create chatwithconfluence --num-nodes=1 --zone=us-central1-a
     ```
 
 2. Wait for the cluster creation process to complete. It may take a few minutes.
