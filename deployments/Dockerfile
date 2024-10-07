@@ -2,7 +2,7 @@
 FROM python:3.10
 
 # COPY . .
-COPY src .
+COPY src src
 COPY config.py .
 COPY requirements.txt .
 
